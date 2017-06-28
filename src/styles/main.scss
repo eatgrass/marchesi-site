@@ -1,0 +1,97 @@
+// bower:scss
+// endbower
+
+// global styles
+* {
+    box-sizing: border-box
+}
+
+a {
+    text-decoration: none;
+}
+
+//  main
+.site-header {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 400;
+    .site-header__brandmark{
+        display: block;
+        float: left;
+        height: 52px;
+        width: 46px;
+    }
+}
+
+.toggle-button {
+    background: none;
+    border: 0 none;
+    color: #fff;
+    float: right;
+    // font-family: Avenir Next W01 Light,Helvetica Neue,helvetica,arial,sans-serif;
+    font-size: 15px;
+    height: 45px;
+    line-height: 1;
+    padding: 0;
+    position: relative;
+    transition-property: color;
+    width: 80px;
+}
+
+.toggle-button,
+.toggle-button__icon-bar {
+    transition: .15s ease-in-out;
+}
+
+.toggle-button__icon-bar {
+    background: #fff;
+    border-radius: 2px;
+    display: block;
+    height: 2px;
+    margin: 3px 0;
+    width: 21px;
+    transition-property: all;
+}
+
+.toggle-icon {
+    display: block;
+    float: right;
+    transform: translateX(0);
+    transition: .15s linear;
+}
+
+.nav-toggle {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+
+
+// utilities
+.row,
+.col {
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 0 1 100%;
+}
+
+.row,
+.row>.col {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row__fat>.col {
+    margin-top: 40px
+}
