@@ -10,6 +10,87 @@ a {
     text-decoration: none;
 }
 
+.scroll-fade {
+    transition: .6s ease!important;
+}
+
+.scroll-fade--in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.h1,h1 {
+    font-weight: 800;
+    font-size: 30px;
+    font-size: 1.66667rem
+}
+
+@media all and (min-width: 768px) {
+    .h1,h1 {
+        font-size:45px;
+        font-size: 2.5rem
+    }
+}
+
+.h2,h2 {
+    font-weight: 800;
+    font-size: 26px;
+    font-size: 1.44444rem
+}
+
+@media all and (min-width: 768px) {
+    .h2,h2 {
+        font-size:38px;
+        font-size: 2.11111rem
+    }
+}
+
+
+// utilities
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    width: 100%
+}
+
+.row,
+.col {
+    position: relative;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 0 1 100%;
+}
+
+.row,
+.row>.col {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row__fat>.col {
+    margin-top: 40px
+}
+
+.row--hc {
+    justify-content: center;
+}
+
+.row--vc {
+    align-items: center;
+}
+
+.row--flat>.col {
+    margin-top: 0;
+}
+
 //  main
 .site-header {
     left: 0;
@@ -41,11 +122,11 @@ a {
 }
 
 .toggle-button,
-.toggle-button__icon-bar {
+.toggle-button__bar {
     transition: .15s ease-in-out;
 }
 
-.toggle-button__icon-bar {
+.toggle-button__bar {
     background: #fff;
     border-radius: 2px;
     display: block;
@@ -54,6 +135,7 @@ a {
     width: 21px;
     transition-property: all;
 }
+
 
 .toggle-icon {
     display: block;
@@ -68,30 +150,155 @@ a {
 }
 
 
+// main banner
 
-
-// utilities
-.row,
-.col {
+.main-banner__wrapper{
+    background: #222 no-repeat 50%;
+    color: #fff;
     position: relative;
+    background-size: cover;
+    text-align: center;
+    background-image: url(/images/home/cover.jpeg)
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
+
+.main-banner__wrapper>.row {
+    min-height: 350px;
+    position: relative;
+    z-index: 100;
 }
 
-.col {
-    flex: 0 1 100%;
+@media (min-width: 768px) {
+    .main-banner__wrapper>.row {
+        min-height: 40vw;
+    }
 }
 
-.row,
-.row>.col {
-    padding-left: 20px;
-    padding-right: 20px;
+.main-banner__wrapper>.row {
+    min-height: 100vh;
 }
 
-.row__fat>.col {
-    margin-top: 40px
+@media (min-width: 800px) {
+    .main-banner__wrapper>.row {
+        min-height:0;
+        height: 56.25vw
+    }
+}
+
+.main-banner__wrapper .col {
+    position: static;
+}
+
+@media all and (min-width: 768px) {
+    .h1,h1 {
+        font-size:45px;
+        font-size: 2.5rem
+    }
+}
+
+.main-banner__headline {
+    font-weight: 800;
+    font-size: 34px;
+    margin: 0;
+    font-family: Quarto A,Quarto B,Baskerville,Baskerville Old Face,Hoefler Text,Garamond,Times New Roman,serif
+}
+
+@media all and (min-width: 375px) {
+    .main-banner__headline {
+        font-size:40px
+    }
+}
+
+@media all and (min-width: 405px) {
+    .main-banner__headline {
+        font-size:44px
+    }
+}
+
+@media all and (min-width: 768px) {
+    .main-banner__headline {
+        font-size:52px
+    }
+}
+
+@media all and (min-width: 1100px) {
+    .main-banner__headline {
+        font-size:75px
+    }
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, ol:first-child, p:first-child, ul:first-child {
+    margin-top: 0;
+}
+
+
+// about section
+
+.about-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    text-align: center;
+}
+
+@media all and (min-width: 992px) {
+    .about {
+        padding-top:70px;
+        padding-bottom: 70px
+    }
+}
+
+.about--fat-bottom {
+    padding-bottom: 45vw;
+}
+
+@media all and (min-width: 500px) {
+    .about--fat-bottom {
+        padding-bottom:30vw
+    }
+}
+
+@media all and (min-width: 992px) {
+    .about--fat-bottom {
+        padding-bottom:23vw
+    }
+}
+
+.about__content-wrapper {
+    position: relative;
+    z-index: 100;
+}
+
+.about-section>.container {
+    max-width: 700px
+}
+
+h2.about__headline {
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    line-height: 1.1
+}
+
+@media all and (min-width: 768px) {
+    h2.about__headline {
+        font-size:56px
+    }
+}
+
+.about__link {
+    margin-top: 30px;
+    font-size: 13px;
+    border: 2px solid;
+    line-height: 1.2;
+    padding: 18px 30px;
+    letter-spacing: .25em;
+    text-align: center;
+    transition: .1s ease-in-out;
+    background-color: transparent;
+    border-color: #191819;
+    display: inline-block;
+    color: #191819;
 }
