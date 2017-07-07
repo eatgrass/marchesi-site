@@ -11,6 +11,7 @@
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
+        <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -20,7 +21,8 @@
     <body class="page">
         <header class="site-header row row__fat" role="banner">
             <div class="col">
-                <a class="site-header__brandmark" href="www.baidu.com">
+                <a class="site-header__brandmark" href="">
+                    <img class="animated fadeIn" src="images/home/logo.png">
                     <!-- brandmark images -->
                 </a>
                 <button class="toggle-button nav-toggle">
@@ -59,19 +61,115 @@
                     </div>
                 </div>
             </section>
-            <div class="products-intro-wrap">
+            <div class="product-intro-wrap">
+                <!-- Wine -->
+                <div class="product product--wine product--sticky">
+                    <div class="product__inner" style="background-image:url('/images/product/nature.jpg');">
+                        <a class="product__content" href="">
+                            <div class="deco-line"></div>
+                            <h3 class="product__name scroll-fade scroll-fade--in">爱上</h2>
+                            <h2 class="product__name scroll-fade scroll-fade--in love"><span>自然</span>的你</h2>
+                            <div class="product__link scroll-fade scroll-fade--in">查看更多</div>
+                        </a>
+                    </div>
+                </div>
                 <!-- Cake -->
                 <div class="product product--cake product--sticky">
-                    </div class="product__inner" style="background-image:url("/images/product/cake/cover.jpeg");">
+                    <div class="product__inner" style="background-image:url('/images/product/health.jpg');">
+                        <a class="product__content" href="">
+                            <div class="deco-line"></div>
+                            <h3 class="product__name theme-dark scroll-fade scroll-fade--in">爱上</h3>
+                            <h2 class="product__name theme-dark scroll-fade scroll-fade--in"><span>健康</span>的你</h2>
+                            <div class="product__link theme-dark scroll-fade scroll-fade--in">查看更多</div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Travel -->
+                <div class="product product--travel product--sticky">
+                    <div class="product__inner" style="background-image:url('/images/product/art.png');">
+                        <a class="product__content" href="">
+                            <div class="deco-line"></div>
+                            <h3 class="product__name scroll-fade scroll-fade--in">爱上</h3>
+                            <h2 class="product__name scroll-fade scroll-fade--in"><span>艺术</span>的你</h2>
+                            <div class="product__link scroll-fade scroll-fade--in">查看更多</div>
+                        </a>
                     </div>
                 </div>
             </div>
         </main>
+        <section class="contact">
+            <div class="container container--tablet-sm">
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-content text-center">
+                            <h2>联系我们</h2>
+                        </div>
+
+                        <form class="form">
+                            <div class="row row--fat row--no-gutter">
+                                <div class="col">
+                                    <div class="form__field">
+                                        <input class="form__input" type="text" id="contact_name">
+                                        <label class="form__label form__label--placeholder" for="contact_name">姓名</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row--fat row--no-gutter">
+                                <div class="col">
+                                    <div class="form__field">
+                                        <input class="form__input" type="text" id="contact_email">
+                                        <label class="form__label form__label--placeholder" for="contact_name">电子邮箱</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row--fat row--no-gutter">
+                                <div class="col">
+                                    <div class="form__field">
+                                        <input class="form__input" type="text" id="contact_mobile">
+                                        <label class="form__label form__label--placeholder" for="contact_name">手机</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row--fat row--no-gutter">
+                                <div class="col">
+                                    <div class="form__field">
+                                        <input class="form__input" type="text" id="contact_content">
+                                        <label class="form__label form__label--placeholder" for="contact_name">内容</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row row--fat row--no-gutter">
+                                <div class="col text-center">
+                                    <button class="button form__submit">发送</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="align-center">
+                            <img src="images/home/footer_logo.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <p>@Marchesi Valentini | 上海-长宁 中山西路 1288 | 400-0000-9999</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
