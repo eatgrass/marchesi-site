@@ -2,20 +2,20 @@
 // endbower
 
 //font
-@font-face {font-family: 'Noto Sans Bold';
-  src: url('//at.alicdn.com/t/o0umtlg0w39b2o6r.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/o0umtlg0w39b2o6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/o0umtlg0w39b2o6r.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/o0umtlg0w39b2o6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/o0umtlg0w39b2o6r.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
+@font-face {font-family: 'Noto Sans Regular';
+  src: url('//at.alicdn.com/t/pofhaycgq6bf0f6r.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/pofhaycgq6bf0f6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
 }
 
 @font-face {font-family: 'Noto Sans Regular';
-  src: url('//at.alicdn.com/t/5an5mthn3fjbrzfr.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/5an5mthn3fjbrzfr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/5an5mthn3fjbrzfr.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/5an5mthn3fjbrzfr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/5an5mthn3fjbrzfr.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/anxai9lzy5m3rf6r.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/anxai9lzy5m3rf6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
 }
 
 // global styles
@@ -29,10 +29,11 @@ a {
 
 .scroll-fade {
     transition: .6s ease!important;
+    opacity: 0;
 }
 
 .scroll-fade--in {
-    opacity: 1;
+    opacity: 0;
     transform: translateY(0);
 }
 
@@ -325,6 +326,13 @@ h2.about__headline {
     margin-top: 20px;
     margin-bottom: 30px;
     line-height: 1.1
+}
+
+.about__content {
+    font-family: "Noto Sans Regular";
+    line-height: 2.3rem;
+    font-size: 1.3rem;
+    text-align: justify;
 }
 
 @media all and (min-width: 768px) {

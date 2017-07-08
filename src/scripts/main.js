@@ -1,67 +1,69 @@
-var stickyHeaders = (function() {
+$(document).ready(function(){
 
-  var $window = $(window),
-      $stickies;
+    $.fn.extend({
+        animateCss: function (animationName) {
+            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+            this.addClass('animated ' + animationName).one(animationEnd, function() {
+                $(this).removeClass('animated ' + animationName);
+            });
+        }
+    });
 
-  var load = function(stickies) {
+    var $window = $(window);
 
-    if (typeof stickies === "object" && stickies instanceof jQuery && stickies.length > 0) {
-
-      $stickies = stickies.each(function() {
-
-        var $thisSticky = $(this).wrap('<div class="followWrap" />');
-
+    // scroll sticky
+    var $stickies = $(".product--sticky").each(function(){
+        var $thisSticky = $(this).wrap('<div class="StickyWrap" />');
         $thisSticky
             .data('originalPosition', $thisSticky.offset().top)
             .data('originalHeight', $thisSticky.outerHeight())
-              .parent()
-              .height($thisSticky.outerHeight());
-      });
+            .parent()
+            .height($thisSticky.outerHeight());
+    })
 
-      $window.off("scroll.stickies").on("scroll.stickies", function() {
-		  _whenScrolling();
-      });
-    }
-  };
+    $window.off("scroll.stickies").on("scroll.stickies", function(){
+        $stickies.each(function(i) {
+            var $thisSticky = $(this),
+            $stickyPosition = $thisSticky.data('originalPosition');
 
-  var _whenScrolling = function() {
+            if ($stickyPosition <= $window.scrollTop()) {
 
-    $stickies.each(function(i) {
+                var $nextSticky = $stickies.eq(i + 1),
+                $nextStickyPosition = $nextSticky.data('originalPosition') - $thisSticky.data('originalHeight');
 
-      var $thisSticky = $(this),
-          $stickyPosition = $thisSticky.data('originalPosition');
+                $thisSticky.addClass("fixed");
 
-      if ($stickyPosition <= $window.scrollTop()) {
+                if ($nextSticky.length > 0 && ($thisSticky.offset().top - $thisSticky.data('originalHeight'))>= $nextStickyPosition) {
 
-        var $nextSticky = $stickies.eq(i + 1),
-            $nextStickyPosition = $nextSticky.data('originalPosition') - $thisSticky.data('originalHeight');
+                    $thisSticky.addClass("absolute").css("top", $nextStickyPosition);
+                }
 
-        $thisSticky.addClass("fixed");
+            } else {
 
-        if ($nextSticky.length > 0 && ($thisSticky.offset().top - $thisSticky.data('originalHeight'))>= $nextStickyPosition) {
+                var $prevSticky = $stickies.eq(i - 1);
 
-          $thisSticky.addClass("absolute").css("top", $nextStickyPosition);
-        }
+                $thisSticky.removeClass("fixed");
 
-      } else {
+                if ($prevSticky.length > 0 && $window.scrollTop() <= $thisSticky.data('originalPosition') ) {
 
-        var $prevSticky = $stickies.eq(i - 1);
-
-        $thisSticky.removeClass("fixed");
-
-        if ($prevSticky.length > 0 && $window.scrollTop() <= $thisSticky.data('originalPosition') ) {
-
-          $prevSticky.removeClass("absolute").removeAttr("style");
-        }
-      }
+                    $prevSticky.removeClass("absolute").removeAttr("style");
+                }
+            }
+        });
     });
-  };
 
-  return {
-    load: load
-  };
-})();
 
-$(function() {
-  stickyHeaders.load($(".product"));
+    //scroll fade in
+
+    $window.scroll(function(){
+        $('.scroll-fade').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).addClass('animated fadeInUp');
+
+            }
+        });
+    })
 });
