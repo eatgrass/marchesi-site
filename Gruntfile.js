@@ -296,6 +296,14 @@ module.exports = function (grunt) {
                     '<%= yeoman.dist %>/images',
                     '<%= yeoman.dist %>/styles'
                 ],
+                blockReplacements: {
+                    css: function (block) {
+                        return '<link rel="stylesheet" href="/' + block.dest + '"/>';
+                    },
+                    js: function (block) {
+                        return '<script src="/' + block.dest + '"></script>';
+                    }
+                },
                 patterns: {
                     js: [
                         [/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']
@@ -386,7 +394,7 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.dist %>',
                     src: [
                         '*.{ico,png,txt}',
-                        '*.html',
+                        '{,*/}*.html',
                         'images/{,*/}*.{webp}',
                         'styles/fonts/{,*/}*.*'
                     ]
