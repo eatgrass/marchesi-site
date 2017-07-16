@@ -410,18 +410,18 @@ h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, 
 }
 
 .about--fat-bottom {
-    padding-bottom: 15vw;
+    padding-bottom: 5vw;
 }
 
 @media all and (min-width: 500px) {
     .about--fat-bottom {
-        padding-bottom:10vw
+        padding-bottom:5vw
     }
 }
 
 @media all and (min-width: 992px) {
     .about--fat-bottom {
-        padding-bottom:10vw
+        padding-bottom:5vw
     }
 }
 
