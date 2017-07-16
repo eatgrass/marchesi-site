@@ -166,6 +166,7 @@ a {
     position: relative;
     transition-property: color;
     width: 80px;
+    outline: none;
 }
 
 .toggle-button,
@@ -196,7 +197,123 @@ a {
     cursor: pointer;
 }
 
+// navigation
+.navigation-wrapper {
+    background-color: hsla(0,0%,100%,0);
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transition: background-color .1s linear;
+    width: 100%;
+    will-change: background-color;
+    z-index: 300;
+}
 
+.navigation--primary {
+    background-color: #191819;
+    transition: all .25s ease-in-out;
+    transform: translateY(-100%);
+    opacity: .5;
+    align-items: center;
+    height: 100%;
+}
+
+@media all and (min-width: 768px) {
+    .navigation--primary {
+        padding-top:0;
+        height: 100vh
+    }
+}
+
+.nav {
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0 0 20px;
+    text-align: left;
+}
+
+@media all and (min-width: 768px) {
+    .nav {
+        width:100%
+    }
+}
+
+@media all and (min-width: 1100px) {
+    .nav {
+        margin-left:auto;
+        margin-right: auto
+    }
+}
+
+@media all and (min-width: 768px) {
+    .nav--primary {
+        padding-top:20vh
+    }
+}
+
+@media all and (min-width: 768px) {
+    .nav__item {
+        display:inline-block
+    }
+}
+
+@media all and (min-width: 768px) {
+    .nav__item--primary {
+        width:100%
+    }
+}
+
+@media all and (min-width: 1100px) {
+    .nav__item--primary {
+        width:100%
+    }
+}
+
+.nav__link {
+    color: #888;
+    display: inline-block;
+    font-size: 28px;
+    font-family: Noto Sans Regular;
+    font-weight: 300;
+    padding: 35px;    
+    transition: color 75ms ease-in-out;
+    will-change: color
+}
+
+.nav__link:hover {
+    color: #fff;
+}
+
+@media all and (min-width: 768px) {
+    .nav__link {
+        font-size:40px;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .nav__link {
+        font-size:40px
+    }
+}
+
+@media all and (min-width: 1100px) {
+    .nav__link {
+        font-size:44px
+    }
+}
+
+.nav__item--active>.nav__link--primary,.nav__link--primary:hover {
+    color: #0dc3ad
+}
+
+.navigation-wrapper--open .navigation--primary {
+    transform: translateY(0);
+    opacity: 1;
+}
 // main banner
 
 .main-banner__wrapper{
@@ -205,7 +322,6 @@ a {
     position: relative;
     background-size: cover;
     text-align: center;
-    background-image: url(/images/home/cover.jpg)
 }
 
 
@@ -217,13 +333,10 @@ a {
 }
 
 @media (min-width: 768px) {
-    .main-banner__wrapper>.row {
+    .main-banner__wrapper.wine>.row {
         min-height: 40vw;
+        height: auto;
     }
-}
-
-.main-banner__wrapper>.row {
-    min-height: 100vh;
 }
 
 @media (min-width: 800px) {

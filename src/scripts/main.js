@@ -76,4 +76,15 @@ $(document).ready(function(){
             }
         });
     })
+
+    //navigation toggle
+    $navToggle = $('button.nav-toggle');
+    $navWrapper = $('.navigation-wrapper')
+    $navToggle.click(function(){
+        if($navWrapper.hasClass('navigation-wrapper--open')) {
+            $navWrapper.removeClass('navigation-wrapper--open');
+        }else {
+            $navWrapper.addClass('navigation-wrapper--open');
+        }
+    })
 });
