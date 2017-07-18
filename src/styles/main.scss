@@ -123,6 +123,178 @@ a {
     padding-left: 0;
     padding-right: 0
 }
+@media all and (min-width: 992px) {
+    .container--md {
+        max-width:992px
+    }
+
+    .row--40pxgutter,.row--40pxgutter>.col {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+    .row--md-wide-gutter,.row--md-wide-gutter>.col {
+        padding-left: 40px;
+        padding-right: 40px
+    }
+
+    .row--md-fat>.col {
+        margin-top: 40px
+    }
+
+    .row--md-thin>.col {
+        margin-top: 20px
+    }
+
+    .row--md-flat>.col {
+        margin-top: 0
+    }
+
+    .row--md-no-gutter,.row>.col--md-no-gutter {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .row--md-offset {
+        margin-left: -40px;
+        margin-right: -40px
+    }
+
+    .row--md-hc {
+        justify-content: center
+    }
+
+    .row--md-vc {
+        align-items: center
+    }
+
+    .row--md-reverse {
+        flex-direction: row-reverse
+    }
+
+    .col.col--md-1 {
+        flex: 0 1 8.33333%;
+        max-width: 8.33333%
+    }
+
+    .col.col--md-2 {
+        flex: 0 1 16.66667%;
+        max-width: 16.66667%
+    }
+
+    .col.col--md-3 {
+        flex: 0 1 25%;
+        max-width: 25%
+    }
+
+    .col.col--md-4 {
+        flex: 0 1 33.33333%;
+        max-width: 33.33333%
+    }
+
+    .col.col--md-5 {
+        flex: 0 1 41.66667%;
+        max-width: 41.66667%
+    }
+
+    .col.col--md-6 {
+        flex: 0 1 50%;
+        max-width: 50%
+    }
+
+    .col.col--md-7 {
+        flex: 0 1 58.33333%;
+        max-width: 58.33333%
+    }
+
+    .col.col--md-8 {
+        flex: 0 1 66.66667%;
+        max-width: 66.66667%
+    }
+
+    .col.col--md-9 {
+        flex: 0 1 75%;
+        max-width: 75%
+    }
+
+    .col.col--md-10 {
+        flex: 0 1 83.33333%;
+        max-width: 83.33333%
+    }
+
+    .col.col--md-11 {
+        flex: 0 1 91.66667%;
+        max-width: 91.66667%
+    }
+
+    .col.col--md-12 {
+        flex: 0 1 100%;
+        max-width: 100%
+    }
+
+    .col.md-loose-1-of-2 {
+        flex: 0 1 50%;
+        max-width: 50%
+    }
+
+    .col.md-loose-1-of-3 {
+        flex: 0 1 33.33333%;
+        max-width: 33.33333%
+    }
+
+    .col.md-loose-1-of-4 {
+        flex: 0 1 25%;
+        max-width: 25%
+    }
+
+    .col.md-loose-1-of-5 {
+        flex: 0 1 20%;
+        max-width: 20%
+    }
+
+    .col.md-loose-1-of-6 {
+        flex: 0 1 16.66667%;
+        max-width: 16.66667%
+    }
+
+    .col.md-loose-1-of-7 {
+        flex: 0 1 14.28571%;
+        max-width: 14.28571%
+    }
+
+    .col.md-loose-1-of-8 {
+        flex: 0 1 12.5%;
+        max-width: 12.5%
+    }
+
+    .col.md-loose-1-of-9 {
+        flex: 0 1 11.11111%;
+        max-width: 11.11111%
+    }
+
+    .col.md-loose-1-of-10 {
+        flex: 0 1 10%;
+        max-width: 10%
+    }
+
+    .col.md-loose-1-of-11 {
+        flex: 0 1 9.09091%;
+        max-width: 9.09091%
+    }
+
+    .col.md-loose-1-of-12 {
+        flex: 0 1 8.33333%;
+        max-width: 8.33333%
+    }
+
+    .col.col--md-auto {
+        flex: 0 0 auto
+    }
+
+    .col.col--md-fill {
+        flex: 1 1 0
+    }
+}
 
 .align-center, .text-center {
     text-align: center;
@@ -279,7 +451,7 @@ a {
     font-size: 28px;
     font-family: Noto Sans Regular;
     font-weight: 300;
-    padding: 35px;    
+    padding: 35px;
     transition: color 75ms ease-in-out;
     will-change: color
 }
@@ -783,4 +955,41 @@ h2.product__name {
 .site-header__brandmark img {
   animation-duration: 3s;
   animation-delay: 0s;
+}
+
+.project-image {
+    background: no-repeat 50%;
+    background-size: cover;
+    display: block;
+    width: 100%;
+}
+
+.project-image__hidden-img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+}
+
+.project-image__spacer {
+    padding-top: 75%;
+}
+
+.project-text {
+    padding: 65px;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    p {
+        margin-top: 30px;
+        line-height: 2rem;
+        text-align: justify;
+    }
 }
