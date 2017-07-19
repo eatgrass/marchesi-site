@@ -86,5 +86,17 @@ $(document).ready(function(){
         }else {
             $navWrapper.addClass('navigation-wrapper--open');
         }
-    })
+    });
+
+    $('.bxslider').bxSlider({
+        controls:false,
+        auto: true,
+        pager: false,
+        minSlides: 1,
+        maxSlides: 4,
+        moveSlides: 1,
+        slideWidth: 450,
+        captions: true,
+        slideMargin: 50
+    });
 });

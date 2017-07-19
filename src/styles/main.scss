@@ -1124,3 +1124,30 @@ h2.product__name {
         display: block;
    }
 }
+
+
+.bx-wrapper {
+    border:none;
+    box-shadow: none;
+    margin-bottom: 0px;
+}
+
+.art-section-1 {
+    display: none;
+}
+
+@media all and (min-width: 768px) {
+    .art-section-1 {
+        padding: 75px 0;
+        display: block;
+    }
+}
+
+.slider-name,.slider-name-it{
+    text-align: right;
+    padding: 0 16px 5px 0;
+}
+
+.slider-name {
+    margin-top: 20px;
+}

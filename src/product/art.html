@@ -12,6 +12,7 @@
         <!-- bower:css -->
         <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
         <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+        <link rel="stylesheet" href="/bower_components/bxslider-4/dist/jquery.bxslider.min.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -21,10 +22,6 @@
     <body class="page">
         <header class="site-header row row__fat" role="banner">
             <div class="col">
-                <!-- <a class="site-header__brandmark" href=""> -->
-                    <!-- <img class="animated fadeIn" src="/images/home/logo.png"> -->
-                    <!-- brandmark images -->
-                <!-- </a> -->
                 <button class="toggle-button nav-toggle">
                     <span class="toggle-icon">
                         <span class="toggle-button__bar"></span>
@@ -48,18 +45,15 @@
         </section>
         <main>
             <section class="art-section-1">
-                <div class="row row--no-gutter">
-                    <div class="col col--md-6 col--no-gutter project-image" style="background-image:url('/images/product/art/banner_bg.png')">
-                        <div class="project-image__spacer"></div>
-                        <img class="project-image__hidden-img" src="/images/product/wine/_MG_8811.png">
-                    </div>
-                    <div class="col col--md-6 col--no-gutter">
-                        <div class="project-text">
-                            <h2>将最初的幻境还给你</h2>
-                            <p>这样的场景在我们的生活中实在是不多了。从什么时候开始，喝酒成了应酬的方式，必须硬着头皮，不喝到乾坤颠倒不能罢休。又或者多少人借酒浇愁，酒入愁肠，是化作相思泪还是苦胆水？不优雅，不从容。</p>
-                            <p>该有这样一场相聚，我们轻松的交谈，愉悦的哼唱，会点乐器的朋友在一旁拍着鼓吹着笛，间或有人在小提琴响起的时候忘情的摇摆起来。</p>
-                        </div>
-                    </div>
+                <div class="row row--flat row--vc row--hc">
+                   <ul class="bxslider">
+                        <li><div><img src="/images/product/art/slider-1.png" width="450px" height="450px"/><div class="slider-name">卡罗莱纳</div><div class="slider-name-it">fgsggfsdgrete</div></div></li>
+                        <li><div><img src="/images/product/art/slider-1.png" width="450px" height="450px"/><div class="slider-name">卡罗莱纳</div><div class="slider-name-it">fgsggfsdgrete</div></div></li>
+                        <li><div><img src="/images/product/art/slider-1.png" width="450px" height="450px"/><div class="slider-name">卡罗莱纳</div><div class="slider-name-it">fgsggfsdgrete</div></div></li>
+                        <li><div><img src="/images/product/art/slider-1.png" width="450px" height="450px"/><div class="slider-name">卡罗莱纳</div><div class="slider-name-it">fgsggfsdgrete</div></div></li>
+                        <li><div><img src="/images/product/art/slider-1.png" width="450px" height="450px"/><div class="slider-name">卡罗莱纳</div><div class="slider-name-it">fgsggfsdgrete</div></div></li>
+                        <li><div><img src="/images/product/art/slider-1.png" width="450px" height="450px"/><div class="slider-name">卡罗莱纳</div><div class="slider-name-it">fgsggfsdgrete</div></div></li>
+                    </ul>
                 </div>
             </section>
             <section class="art-section-2">
@@ -118,9 +112,10 @@
             </div>
         </footer>
 
-       <!-- build:js(.) scripts/vendor.js -->
+        <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:js({.tmp,src}) scripts/scripts.js -->

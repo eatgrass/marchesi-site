@@ -23,6 +23,7 @@ module.exports = function(config) {
     files: [
       // bower:js
       'bower_components/jquery/dist/jquery.js',
+      'bower_components/bxslider-4/dist/jquery.bxslider.js',
       // endbower
       "app/scripts/**/*.js",
       "test/mock/**/*.js",
