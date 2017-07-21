@@ -1183,3 +1183,86 @@ h2.product__name {
     }
 }
 
+.cake-section-right {
+    display: flex;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    height: 60vw;
+    h2 {
+        font-family: Noto Sans Bold;
+        font-size:4.5rem;
+    }
+}
+
+.cake-section-2 .cake-section-text {
+    position: absolute;
+    left: 275px;
+    top: 170px;
+
+    h2 {
+        font-family: Noto Sans Bold;
+        font-size: 4.5rem;
+    }
+}
+.cake-section-3 .cake-section-text {
+    position: absolute;
+    top: 335px;
+    left: 300px;
+    h2 {
+        font-size: 4.5rem;
+        font-family: Noto Sans Bold;
+    }
+}
+
+.cake-section-4 .cake-section-text {
+    position: absolute;
+    width: 100%;
+    top: 23%;
+    h2 {
+        font-size: 4.5rem;
+        font-family: Noto Sans Bold;
+        color: #fff;
+        text-align: center;
+    }
+}
+
+.product-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    padding-left:75px;
+}
+
+@media all and (max-width: 768px) {
+    .product-headline {
+        align-items: center;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .cake-section-1 .cake-section-right {
+        height: 75vw;
+        .project-text {
+            padding:0;;
+        }
+        h2 {
+            font-size: 2.2rem
+        }
+    }
+    .cake-section-2 .cake-section-text {
+        position: relative;
+        left: auto;
+        top: 35px;
+        h2 {
+            text-align: center;
+            font-family: Noto Sans Bold;
+            font-size: 2.2rem;
+        }
+    }
+
+    .cake-section-4 .cake-section-text h2 {
+        font-size:2.2rem;
+    }
+}
