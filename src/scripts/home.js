@@ -1,14 +1,4 @@
 $(document).ready(function(){
-
-    $.fn.extend({
-        animateCss: function (animationName) {
-            var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-            this.addClass('animated ' + animationName).one(animationEnd, function() {
-                $(this).removeClass('animated ' + animationName);
-            });
-        }
-    });
-
     var isMobile = false; //initiate as false
     // device detection
     if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -16,43 +6,50 @@ $(document).ready(function(){
         isMobile = true;
     }
 
-    //scroll fade in
     var $window = $(window);
 
-    $window.scroll(function(){
-        $('.scroll-fade').each( function(i){
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if( bottom_of_window > bottom_of_object ){
+    if(!isMobile){
 
-                $(this).addClass('animated fadeInUp');
 
-            }
+        // scroll sticky
+        var $stickies = $(".product--sticky").each(function(){
+            var $thisSticky = $(this).wrap('<div class="StickyWrap" />');
+            $thisSticky
+                .data('originalPosition', $thisSticky.offset().top)
+                .data('originalHeight', $thisSticky.outerHeight())
+                .parent()
+                .height($thisSticky.outerHeight());
+        })
+
+        $window.off("scroll.stickies").on("scroll.stickies", function(){
+            $stickies.each(function(i) {
+                var $thisSticky = $(this),
+                $stickyPosition = $thisSticky.data('originalPosition');
+
+                if ($stickyPosition <= $window.scrollTop()) {
+
+                    var $nextSticky = $stickies.eq(i + 1),
+                    $nextStickyPosition = $nextSticky.data('originalPosition') - $thisSticky.data('originalHeight');
+
+                    $thisSticky.addClass("fixed");
+
+                    if ($nextSticky.length > 0 && ($thisSticky.offset().top - $thisSticky.data('originalHeight'))>= $nextStickyPosition) {
+
+                        $thisSticky.addClass("absolute").css("top", $nextStickyPosition);
+                    }
+
+                } else {
+
+                    var $prevSticky = $stickies.eq(i - 1);
+
+                    $thisSticky.removeClass("fixed");
+
+                    if ($prevSticky.length > 0 && $window.scrollTop() <= $thisSticky.data('originalPosition') ) {
+
+                        $prevSticky.removeClass("absolute").removeAttr("style");
+                    }
+                }
+            });
         });
-    })
-
-    //navigation toggle
-    $navToggle = $('button.nav-toggle');
-    $navWrapper = $('.navigation-wrapper')
-    $navToggle.click(function(){
-        if($navWrapper.hasClass('navigation-wrapper--open')) {
-            $navWrapper.removeClass('navigation-wrapper--open');
-        }else {
-            $navWrapper.addClass('navigation-wrapper--open');
-        }
-    });
-
-//     $('.bxslider').bxSlider({
-//         controls:false,
-//         pager: false,
-//         minSlides: 1,
-//         maxSlides: 4,
-//         moveSlides: 1,
-//         slideWidth: 450,
-//         captions: true,
-//         slideMargin: 50,
-//         ticker: true,
-//         tickerHover: true,
-//         speed:40000
-//     });
+    }
 });
