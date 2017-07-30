@@ -1,23 +1,19 @@
 // bower:scss
 // endbower
-
-//font
-@font-face {font-family: 'Noto Sans Regular';
-  src: url('//at.alicdn.com/t/pofhaycgq6bf0f6r.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/pofhaycgq6bf0f6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
+@font-face {font-family: 'Noto Sans Light';
+  src: url('//at.alicdn.com/t/4ax5pj31yabjfw29.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/4ax5pj31yabjfw29.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/4ax5pj31yabjfw29.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/4ax5pj31yabjfw29.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/4ax5pj31yabjfw29.svg#思源黑体-细') format('svg'); /* iOS 4.1- */
 }
-
 @font-face {font-family: 'Noto Sans Regular';
-  src: url('//at.alicdn.com/t/anxai9lzy5m3rf6r.eot'); /* IE9*/
-  src: url('//at.alicdn.com/t/anxai9lzy5m3rf6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
+  src: url('//at.alicdn.com/t/ukpcmmomch74lsor.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/ukpcmmomch74lsor.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/ukpcmmomch74lsor.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/ukpcmmomch74lsor.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/ukpcmmomch74lsor.svg#思源黑体-普通') format('svg'); /* iOS 4.1- */
 }
-
 // global styles
 * {
     box-sizing: border-box
@@ -1878,8 +1874,7 @@ a {
     }
 }
 
-
-
+// common
 
 .scroll-fade {
     transition: .6s ease!important;
@@ -1929,9 +1924,9 @@ a {
     z-index: 0;
 }
 
-.product.fixed.absolute {
-    position: absolute;
-}
+// .product.fixed.absolute {
+//     position: absolute;
+// }
 
 //  main
 .site-header {
@@ -2072,7 +2067,7 @@ a {
     color: #888;
     display: inline-block;
     font-size: 28px;
-    font-family: Noto Sans Regular;
+    font-family: Noto Sans Light;
     font-weight: 300;
     padding: 35px;
     transition: color 75ms ease-in-out;
@@ -2110,16 +2105,44 @@ a {
     opacity: 1;
 }
 
-// .site-footer {
-//     position: relative;
-//     background: #fff;
-//     clear: both;
-//     color: #a5a5a5;
-//     font-family: Avenir Next W01 Light,Helvetica Neue,helvetica,arial,sans-serif;
-//     font-size: 14px;
-//     line-height: 1.6;
-//     padding: 80px 0 40px;
-// }
+.golden-line-bottom {
+    border-bottom: solid 3px #cc9933;
+}
+
+.golden-line-top {
+    border-top: solid 3px #cc9933;
+}
+
+
+@media all and (min-width: 48em) {
+
+    .md-align-right {
+        text-align: right !important;
+    }
+
+    .md-align-center {
+        text-align: center !important;
+    }
+
+    .md-align-left {
+        text-align: left !important;
+    }
+}
+
+.logo-image{
+    width:320px;
+    height:auto;
+}
+.site-footer {
+    position: relative;
+    background: #fff;
+    clear: both;
+    color: #a5a5a5;
+    font-family: Avenir Next W01 Light,Helvetica Neue,helvetica,arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 80px 0 40px;
+}
 
 // .site-header__brandmark img {
 //   animation-duration: 3s;

@@ -9,22 +9,50 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
+    <!-- build:css({.tmp,src,.}) styles/cake.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
     <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <link rel="stylesheet" href="/bower_components/bxslider-4/dist/jquery.bxslider.css" />
     <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="/styles/main.css">
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/cake.css -->
     <link rel="stylesheet" href="/styles/cake.css">
     <!-- endbuild -->
 </head>
 
 <body class="container-fluid">
+    <header class="site-header row row--fat" role="banner">
+            <div class="col">
+                <!-- <a class="site-header__brandmark" href=""> -->
+                    <!-- brandmark images -->
+                <!-- </a> -->
+                <button class="toggle-button nav-toggle">
+                    <span class="toggle-icon">
+                        <span class="toggle-button__bar"></span>
+                        <span class="toggle-button__bar"></span>
+                        <span class="toggle-button__bar"></span>
+                    </span>
+                </button>
+            </div>
+        </header>
+        <div class="navigation-wrapper">
+            <nav class="navigation navigation--primary row" role="navigation">
+                <ul class="nav col">
+                    <li class="nav__item nav__item--primary">
+                        <a href="/" class="nav__link nav__link primary">首页</a>
+                    </li>
+                    <li class="nav__item nav__item--primary">
+                        <a href="/product/wine.html" class="nav__link nav__link primary">爱上自然的你</a>
+                    </li>
+                    <li class="nav__item nav__item--primary">
+                        <a href="/product/cake.html" class="nav__link nav__link primary">爱上健康的你</a>
+                    </li>
+                    <li class="nav__item nav__item--primary">
+                        <a href="/product/art.html" class="nav__link nav__link primary">爱上艺术的你</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     <section style="background-image:url('/images/product/cake/cover.jpg'); background-size:contain; border-bottom: solid 3px #cc9933">
         <div style="padding-top:52%">
         </div>
@@ -36,7 +64,7 @@
         </div>
         <div class="col col--md-6 col--no-gutter text-wrapper">
             <div class="md-align-center">
-                <p>每一天</p>
+                <p><span>每一天</span></p>
                 <p>玛凯仕都准备了甜蜜的问候</p>
                 <p>我们呈现给您的是</p>
                 <p>健康与美丽相结合的产品</p>
@@ -91,7 +119,7 @@
             </div>
         </div>
     </section>
-    <section class="section-6 row row--no-gutter" style="border-bottom: solid 3px #cc9933">
+    <section class="section-6 row row--no-gutter golden-line-bottom" style="padding: 30px 0">
         <div class="col text-block" style="text-align:center">
             <p>我们拥有超过600+种产品</p>
             <p>但不仅限于此，因为</p>
@@ -142,12 +170,12 @@
             </div>
         </div>
     </section>
-    <!-- <footer class="site-footer">
+    <footer class="site-footer">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <div class="align-center">
-                        <img src="/images/home/footer_logo.png">
+                        <img src="/images/logo.jpg" class="logo-image">
                     </div>
                 </div>
             </div>
@@ -157,15 +185,12 @@
                 </div>
             </div>
         </div>
-    </footer> -->
-
-    <!-- build:js(.) scripts/vendor.js -->
+    </footer>
+    <!-- build:js({.tmp,src,.}) scripts/cake.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/bxslider-4/dist/jquery.bxslider.js"></script>
     <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:js({.tmp,src}) scripts/scripts.js -->
     <script src="/scripts/main.js"></script>
     <!-- endbuild -->
 </body>

@@ -1,0 +1,88 @@
+@font-face {font-family: 'Noto Sans Regular';
+  src: url('//at.alicdn.com/t/i5w462wks2a9k9.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/i5w462wks2a9k9.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/i5w462wks2a9k9.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/i5w462wks2a9k9.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/i5w462wks2a9k9.svg#思源黑体-普通') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {font-family: 'Noto Sans Light';
+  src: url('//at.alicdn.com/t/hvkvl4dm2dxz85mi.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/hvkvl4dm2dxz85mi.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/hvkvl4dm2dxz85mi.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/hvkvl4dm2dxz85mi.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/hvkvl4dm2dxz85mi.svg#思源黑体-细') format('svg'); /* iOS 4.1- */
+}
+
+main {
+    margin-bottom:50px;
+}
+
+.art-header {
+    height: 52vw;
+    background-size: cover; 
+}
+
+.text-wrapper {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    // align-content: 
+    div{
+        width: 100%;
+        padding: 25px;
+        text-align: center;
+    }
+
+    p {
+        margin: 8px 0;
+        font-family: Noto Sans Light
+    }
+}
+.slider-wrapper {
+    position: relative;
+    padding: 0;
+    touch-action: pan-y;
+    padding: 30px 0;
+}
+
+.section-1 .text-wrapper,
+.section-2 .text-wrapper,
+.section-7 .text-wrapper,
+.section-8 .text-wrapper {
+    height: 35vh;
+}
+
+.section-9 .tail-image {
+    height:55vw;
+    display: flex;
+    align-items: center;
+}
+
+.section-9 .tail-image h1{
+    text-align: center;
+    width: 100%;
+}
+
+.section-7 .text-wrapper div {
+    text-align:left;
+}
+
+.section-8 .text-wrapper div{
+    text-align:right;
+}
+
+
+@media all and (min-width: 48em) {
+
+    .section-1 {
+        align-items: flex-start;
+    }
+
+    .section-2 {
+        align-items: flex-end;
+    }
+
+}

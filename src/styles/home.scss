@@ -1,5 +1,22 @@
 // main banner
 
+//font
+@font-face {font-family: 'Noto Sans Regular';
+  src: url('//at.alicdn.com/t/pofhaycgq6bf0f6r.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/pofhaycgq6bf0f6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/pofhaycgq6bf0f6r.svg#思源黑体-粗') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {font-family: 'Noto Sans Light';
+  src: url('//at.alicdn.com/t/anxai9lzy5m3rf6r.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/anxai9lzy5m3rf6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/anxai9lzy5m3rf6r.svg#思源黑体-极细') format('svg'); /* iOS 4.1- */
+}
+
 .main-banner__wrapper{
     background: #222 no-repeat 50%;
     color: #fff;
@@ -80,7 +97,7 @@
 
 @media all and (min-width: 1100px) {
     .main-banner__headline {
-        font-size:75px
+        font-size:65px
     }
 }
 
@@ -139,7 +156,7 @@ h2.about__headline {
 }
 
 .about__content {
-    font-family: "Noto Sans Regular";
+    font-family: "Noto Sans Light";
     line-height: 2.3rem;
     font-size: 1.3rem;
     text-align: justify;
@@ -154,7 +171,7 @@ h2.about__headline {
 
 @media all and (min-width: 1100px) {
     .about__content {
-        font-family: "Noto Sans Regular";
+        font-family: "Noto Sans Light";
         line-height: 2.6rem;
         font-size: 1.7rem;
         text-align: justify;
@@ -274,7 +291,7 @@ h2.about__headline {
 }
 
 .product__name {
-    font-family:"Noto Sans Regular";
+    font-family:"Noto Sans Light";
     color: #fff;
     margin-bottom: 50px;
 }
@@ -292,13 +309,13 @@ h2.product__name {
     margin-top: 5px;
     font-size: 4rem;
     span {
-        font-family:"Noto Sans Bold" !important;
+        font-family:"Noto Sans Regular" !important;
     }
 }
 
 
 .product__link {
-    font-family: "Noto Sans";
+    font-family: "Noto Sans Regular";
     font-size: 13px;
     text-transform: uppercase;
     border: 2px solid;

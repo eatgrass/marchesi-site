@@ -8,20 +8,22 @@
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.) styles/vendor.css -->
+        <!-- build:css({.tmp,src,.}) styles/art.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
         <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
         <link rel="stylesheet" href="/bower_components/bxslider-4/dist/jquery.bxslider.min.css" />
         <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/art.css">
         <!-- endbuild -->
     </head>
     <body class="page">
-        <header class="site-header row row__fat" role="banner">
+        <header class="site-header row row--fat" role="banner">
             <div class="col">
+                <!-- <a class="site-header__brandmark" href=""> -->
+                    <!-- brandmark images -->
+                <!-- </a> -->
                 <button class="toggle-button nav-toggle">
                     <span class="toggle-icon">
                         <span class="toggle-button__bar"></span>
@@ -35,6 +37,9 @@
             <nav class="navigation navigation--primary row" role="navigation">
                 <ul class="nav col">
                     <li class="nav__item nav__item--primary">
+                        <a href="/" class="nav__link nav__link primary">首页</a>
+                    </li>
+                    <li class="nav__item nav__item--primary">
                         <a href="/product/wine.html" class="nav__link nav__link primary">爱上自然的你</a>
                     </li>
                     <li class="nav__item nav__item--primary">
@@ -43,38 +48,70 @@
                     <li class="nav__item nav__item--primary">
                         <a href="/product/art.html" class="nav__link nav__link primary">爱上艺术的你</a>
                     </li>
-                    <li class="nav__item nav__item--primary">
-                        <a href="mailto:info@dolce-marchesi.com" class="nav__link nav__link primary">联系我们</a>
-                    </li>
                 </ul>
             </nav>
         </div>
-        <section class="main-banner__wrapper detail-page art" style="background-image:url('/images/product/art/art1.png')">
+        <section class="art-header" style="background-image:url('/images/product/art/cover.jpg')">
              <div class="row row--flat row--vc row--reverse">
-                <div class="col col--3 col--md-3">
+                <div class="col">
                     <div class="art-title" >
-                        <div>
-                            <h3>爱上</h2>
-                            <h2><span>艺术</span>的你</h2>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </section>
         <main>
-            <section class="art-section-1">
-                <div class="row row--flat row--vc row--hc">
-                   <ul class="bxslider">
+            <section class="section-1 row row--no-gutter golden-line-top">
+                <div class="col col--no-gutter text-wrapper">
+                    <div class="md-align-right">
+                        <p>艺术</p>
+                        <p>是玛凯仕持之以恒的追求</p>
+                        <p>我们的艺术家</p>
+                        <p>出生在著名的LUCA古城</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-2 row row--no-gutter golden-line-bottom">
+                <div class="col col--no-gutter text-wrapper">
+                    <div class="md-align-left">
+                        <p>Paolo Lazzerini</p>
+                        <p>是佛罗伦萨</p>
+                        <p>乃至整个意大利</p>
+                        <p>最有个性和创新的著名艺术家</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-3 row row--no-gutter">
+                <div class="col image-wrapper" style="background-image: url('/images/product/art/art_1.jpg'); background-size:cover;">
+                    <div style="padding-top:73%">
+                    </div>
+                </div>
+            </section>
+            <section class="section-4 row row--no-gutter golden-line-top">
+                <div class="col col--no-gutter text-wrapper">
+                    <div class="md-align-center">
+                        <p>保罗·拉泽里尼的绘画作品可以在全球很多画廊找到</p>
+                        <p>他或发自己的大小情感</p>
+                        <p>或描绘山山水水，还有他挚爱的故土气息</p>
+                        <p>各种形状的出现和持续明亮的颜色</p>
+                        <p>预示着画家的风格正往超现实主义方向发展</p>
+                        <p>而作品中的各个元素也显现的更加平衡完美</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-5 golden-line-top golden-line-bottom">
+                <div class="row row--flat row--vc row--hc row--no-gutter">
+                   <ul class="gallery-slider">
                         <li>
                             <div>
-                                <img src="/images/product/art/slider-1.png"/>
+                                <img src="/images/product/art/slider-1.jpg"/>
                                 <div class="slider-name">红色黎明</div>
                                 <div class="slider-name-it"></div>
                             </div>
                         </li>
                         <li>
                             <div>
-                                <img src="/images/product/art/slider-2.png"/>
+                                <img src="/images/product/art/slider-2.jpg"/>
                                 <div class="slider-name">美丽的维西利亚</div>
                                 <div class="slider-name-it"></div>
                             </div>
@@ -94,7 +131,7 @@
                         </li>
                         <li>
                             <div>
-                                <img src="/images/product/art/slider-5.png"/>
+                                <img src="/images/product/art/slider-5.jpg"/>
                                 <div class="slider-name">夜梦中的圆融</div>
                                 <div class="slider-name-it"></div>
                             </div>
@@ -109,42 +146,54 @@
                     </ul>
                 </div>
             </section>
-            <section class="art-section-2">
-                <div class="row row--no-gutter">
-                    <div class="col col--md-6 col--no-gutter project-image" style="background-image:url('/images/product/art/art3.png')">
-                        <div class="project-image__spacer"></div>
-                        <img class="project-image__hidden-img" src="/images/product/art/art3.png">
-                    </div>
-                    <div class="col col--md-6 col--no-gutter art-project-wrapper">
-                        <div class="project-text">
-                            <h2>在玛凯仕</h2>
-                            <h2>爱上艺术的你</h2>
-                            <h2>Marchesi Valentini</h2>
-                        </div>
+            <section class="section-6 row row--no-gutter">
+                <div class="col image-wrapper" style="background-image: url('/images/product/art/art_2.jpg'); background-size:cover;">
+                    <div style="padding-top:56%">
                     </div>
                 </div>
             </section>
-            <section class="art-section-3">
-                <div class="row row--no-gutter row--column-reverse">
-                    <div class="col col--md-6 col--no-gutter">
-                        <div class="project-text">
-                            <h1>艺术因你更美</h1>
-                            <p>现在来自意大利最优秀的艺术家已经来到你身边，现在来自意大利最优秀的艺术家已经来到你身边，现在来自意大利最优秀的艺术家已经来到你身边，现在来自意大利最优秀的艺术家已经来到你身边</p>
-                            <p>现在来自意大利最优秀的艺术家已经来到你身边，现在来自意大利最优秀的艺术家已经来到你身边，现在来自意大利最优秀的艺术家已经来到你身边，现在来自意大利最优秀的艺术家已经来到你身边</p>
-                        </div>
+             <section class="section-7 row row--no-gutter golden-line-bottom">
+                <div class="col col--no-gutter text-wrapper">
+                    <div class="md-align-right">
+                        <p>2017年，</p>
+                        <p>保罗·拉泽里尼携自己的50幅作品第一次来到中国</p>
+                        <p>作为玛凯仕旗下的著名画家举办了为期一个月的巡展</p>
                     </div>
-                    <div class="col col--md-6 col--no-gutter project-image" style="background-image:url('/images/product/art/art4.png')">
-                        <div class="project-image__spacer"></div>
-                        <img class="project-image__hidden-img" src="/images/product/art/art4.png">
-                    </div>
-                    
                 </div>
             </section>
-
-            <section class="art-section-4">
-                <div class="project-image" style="background-image:url('/images/product/art/art5.jpg')">
-                    <div class="project-image__spacer"></div>
-                    <img class="project-image__hidden-img" src="/images/product/art/art5.jpg">
+            <section class="section-8 row row--no-gutter">
+                <div class="col col--no-gutter text-wrapper">
+                    <div class="md-align-left">
+                        <p>保罗·拉泽里尼的作品在不同城市展出，引起了强烈的反响</p>
+                        <p>这次巡展不仅在艺术馆内进行</p>
+                        <p>还结合了晚宴等活动形式走进各艺术空间，文创中心</p>
+                    </div>
+                </div>
+            </section>
+            <section class="section-9 row row--no-gutter golden-line-bottom">
+                <div class="col image-wrapper" style="background-image: url('/images/product/art/art_3.jpg'); background-size:cover;">
+                    <div style="padding-top:56%">
+                    </div>
+                </div>
+            </section>
+            <section class="section-9 row row--no-gutter golden-line-bottom">
+                <div class="col image-wrapper" style="background-image: url('/images/product/art/art_4.jpg'); background-size:cover;">
+                    <div style="padding-top:56%">
+                    </div>
+                </div>
+            </section>
+            <section class="section-8 row row--no-gutter golden-line-bottom">
+                <div class="col col--no-gutter text-wrapper">
+                    <div class="md-align-left">
+                        <p>欢迎收藏</p>
+                        <p>玛凯仕的艺术空间</p>
+                </div>
+            </section>
+            <section class="section-9 row row--no-gutter golden-line-bottom">
+                <div class="col col--no-gutter image-wrapper" style="background-image: url('/images/product/art/art_5.jpg'); background-size:cover;opacity: 0.8;">
+                    <div class="tail-image">
+                        <h1>MARCHESI VALENTINI</h1>
+                    </div>
                 </div>
             </section>
         </main>
@@ -155,7 +204,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="align-center">
-                            <img src="/images/home/footer_logo.png">
+                            <img src="/images/logo.jpg" class="logo-image">
                         </div>
                     </div>
                 </div>
@@ -167,14 +216,13 @@
             </div>
         </footer>
 
-        <!-- build:js(.) scripts/vendor.js -->
+        <!-- build:js({.tmp,src,.}) scripts/art.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
         <script src="/bower_components/bxslider-4/dist/jquery.bxslider.min.js"></script>
         <!-- endbower -->
-        <!-- endbuild -->
-        <!-- build:js({.tmp,src}) scripts/scripts.js -->
         <script src="/scripts/main.js"></script>
+        <script src="/scripts/art.js"></script>
         <!-- endbuild -->
     </body>
 </html>

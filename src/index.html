@@ -13,7 +13,6 @@
         <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
         <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
         <link rel="stylesheet" href="bower_components/bxslider-4/dist/jquery.bxslider.css" />
-        <link rel="stylesheet" href="bower_components/flexboxgrid/dist/flexboxgrid.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
@@ -24,7 +23,7 @@
         <!-- endbuild -->
     </head>
     <body class="page">
-        <header class="site-header row row__fat" role="banner">
+        <header class="site-header row row--fat" role="banner">
             <div class="col">
                 <!-- <a class="site-header__brandmark" href=""> -->
                     <!-- brandmark images -->
@@ -42,6 +41,9 @@
             <nav class="navigation navigation--primary row" role="navigation">
                 <ul class="nav col">
                     <li class="nav__item nav__item--primary">
+                        <a href="/" class="nav__link nav__link primary">首页</a>
+                    </li>
+                    <li class="nav__item nav__item--primary">
                         <a href="/product/wine.html" class="nav__link nav__link primary">爱上自然的你</a>
                     </li>
                     <li class="nav__item nav__item--primary">
@@ -49,9 +51,6 @@
                     </li>
                     <li class="nav__item nav__item--primary">
                         <a href="/product/art.html" class="nav__link nav__link primary">爱上艺术的你</a>
-                    </li>
-                    <li class="nav__item nav__item--primary">
-                        <a href="mailto:info@dolce-marchesi.com" class="nav__link nav__link primary">联系我们</a>
                     </li>
                 </ul>
             </nav>
@@ -82,7 +81,7 @@
             <div class="product-intro-wrap">
                 <!-- Wine -->
                 <div class="product product--wine product--sticky">
-                    <div class="product__inner" style="background-image:url('images/product/nature.png');">
+                    <div class="product__inner" style="background-image:url('images/product/nature.jpg');">
                         <a class="product__content" href="/product/wine.html">
                             <div class="deco-line scroll-fade"></div>
                             <h3 class="product__name scroll-fade">爱上</h2>
@@ -104,7 +103,7 @@
                 </div>
                 <!-- Travel -->
                 <div class="product product--travel product--sticky">
-                    <div class="product__inner" style="background-image:url('images/product/art.png');">
+                    <div class="product__inner" style="background-image:url('images/product/art.jpg');">
                         <a class="product__content" href="/product/art.html">
                             <div class="deco-line scroll-fade"></div>
                             <h3 class="product__name scroll-fade">爱上</h3>
@@ -166,12 +165,12 @@
                 </div>
             </div>
         </section>
-        <footer class="site-footer">
+        <footer class="site-footer" style="z-index:999">
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="align-center">
-                            <img src="images/home/footer_logo.png">
+                            <img src="/images/logo.jpg" class="logo-image">
                         </div>
                     </div>
                 </div>
